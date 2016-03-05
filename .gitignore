@@ -1,0 +1,9 @@
+.*.swp
+.settings
+.project
+.buildpath
+.DS_Store
+.idea
+.metadata
+.tags*
+*.db
