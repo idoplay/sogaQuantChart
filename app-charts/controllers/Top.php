@@ -10,11 +10,16 @@ class Top extends CI_Controller {
     public function index()
     {
         $params = $this->input->get_parameters();
+        $date = empty($params['d']) ? 0: $params['d'];
+
         $Bll_OpeningDay = $this->load->bll('Bll_OpeningDay');
         //取最近10个交易日
-        $this->data['openday_list'] = $Bll_OpeningDay->get_last_opening_day(10);
+        $openday_list = $Bll_OpeningDay->get_last_opening_day(10);
+        $this->data['openday_list'] = $openday_list;
+        if(empty($date)){
+            $date = array_keys($openday_list)[0];
+        }
 
-        $date = empty($params['d']) ? $this->data['openday_list'][0]['dateline'] : $params['d'];
         $params['d'] = $date;
 
 

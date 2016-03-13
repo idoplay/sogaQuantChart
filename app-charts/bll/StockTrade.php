@@ -2,12 +2,21 @@
 
 class Bll_StockTrade extends MY_Bll{
 
-
     public function find($where,$order='',$limit=500){
         $_m = $this->get_dao('S_stock_trade');
         return $_m->find($where,$order,$limit);
     }
-
+    public function get_stock_list($where,$field=''){
+        $_m =$this->get_dao('S_stock_list');
+        $_res = $_m->find($where,'',0);
+        $data = array();
+        if(!empty($field) && !empty($_res)){
+            foreach ($_res as $value) {
+                $data[$value[$field]] = $value;
+            }
+        }
+        return $data;
+    }
     #指数
     public function get_sz_index_data($date){
         $sql="select * from s_index where dateline in(".implode(',',$date).") and zs_code='000001'";

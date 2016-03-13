@@ -4,6 +4,7 @@
         <li><a href="/"><i class="icon-bar-chart"></i><span class="hidden-tablet">总览</span></a></li>
         <li><a href="/runtime"><i class="icon-bar-chart"></i><span class="hidden-tablet">实时</span></a></li>
         <li><a href="/top"><i class="icon-bar-chart"></i><span class="hidden-tablet">涨停</span></a></li>
+        <li><a href="/lhb"><i class="icon-bar-chart"></i><span class="hidden-tablet">龙虎榜</span></a></li>
         <!--li><a href="/"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
         <li><a href="#"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
         <li><a href="#"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>

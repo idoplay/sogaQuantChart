@@ -100,7 +100,7 @@ class Layout{
         }
     }
     public function use_lib_css($css=''){
-        $this->lib_styles[] = 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext';
+        $this->lib_styles[] = $css;
     }
     public function _get_lib_styles(){
         //TODO
@@ -133,7 +133,7 @@ class Layout{
 
     private function _get_scripts(){
         $def_js = array(
-            //'echarts/echarts.js',
+            'echarts/echarts.js',
             'js/jquery-1.10.2.min.js',
             "js/jquery-migrate-1.0.0.min.js",
             "js/jquery-ui-1.10.0.custom.min.js",
@@ -141,7 +141,7 @@ class Layout{
            // "js/modernizr.js",
             "js/bootstrap.min.js",
             "js/jquery.cookie.js",
-            "js/fullcalendar.min.js",
+            //"js/fullcalendar.min.js",
             "js/jquery.dataTables.min.js",
             //"js/excanvas.js",
             "js/jquery.flot.js",

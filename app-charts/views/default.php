@@ -25,7 +25,6 @@ if(file_exists(APPPATH.'_version')){
 <link rel="stylesheet" rev="stylesheet" href="<?php echo $value; ?>" type="text/css" />
 <?php endforeach;?>
 <?php endif;?>
-<script type="text/javascript" src="/pages/echarts/echarts.js"></script>
 </head>
 <body>
 

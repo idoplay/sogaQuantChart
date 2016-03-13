@@ -18,7 +18,12 @@ class Bll_OpeningDay extends MY_Bll{
             $date = date('Ymd');
         }
         $m = $this->get_dao('S_opening_day');
-        return $m->find(array('dateline <='.$date.' and 1='=>1),'dateline DESC',$num);
+        $res = $m->find(array('dateline <='.$date.' and 1='=>1),'dateline DESC',$num);
+        $_rs = array();
+        foreach ($res as $value) {
+            $_rs[$value['dateline']] = $value;
+        }
+        return $_rs;
     }
 
     public function get_date($start=0,$end=0,$limit=62){

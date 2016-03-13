@@ -1,0 +1,6 @@
+RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php)
+RewriteCond %{REQUEST_URI} !^.*\.(gif|png|jpg|jpeg|txt|bmp|xml|css|js|eot|woff|ttf|svg)$
+RewriteRule ^(.*)$ /index.php/$1 [QSA,PT,L]
